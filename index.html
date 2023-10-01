@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <h1 class="heading">WEATHER APP</h1>
+        
+        <div class="tab-div">
+            <p class="tab" user-weather>Your Weather</p>
+            <p class="tab" search-weather>Search Weather</p>
+        </div>
+
+        <div class="container">
+            
+            <!-- GRANT LOCATION -->
+            <div class="grant-location">
+                <img src="images/location.png" alt="Location image" width="100px" height="100px">
+                <h1>Grant Location Access</h1>
+                <p data-messageText>Allow access to get Weather Information.</p>
+                <button type="button" class="btn" data-grant-access>Grant Access</button>
+            </div>
+
+            <!-- SEARCH FORM -->
+            <form class="form-container" data-search-form>
+                <input type="text" class="city_name" placeholder="Enter City Name..." required input-name />
+                <button type="button" class="search-btn" search-button>
+                    <img src="images/search.png" alt="Search Icon" width="30px" height="30px">
+                </button>
+            </form>
+
+            <!-- LOADING SCREEN -->
+            <div class="loading">
+                <img src="images/loading.gif" alt="Loading" width="300px" height="300px">
+                <p>LOADING...</p>
+            </div>
+
+            <!-- SHOW WEATHER INFO -->
+            <div class="weather-info">
+                <div class="name">
+                    <p data-city-name></p>
+                    <img country-icon alt=" Country Flag">
+                </div>
+
+                <p weather-type></p>
+
+                <img weather-icon alt="Weather Icon">
+
+                <h1 temp-reading></h1>
+
+                <div class="more-details">
+                    <div class="windspeed parameter">
+                        <img src="images/wind.png" alt="Wind">
+                        <p>WINDSPEED</p>
+                        <p wind-value></p>
+                    </div>
+
+                    <div class="humidity parameter">
+                        <img src="images/humidity.png" alt="Humidity">
+                        <p>HUMIDITY</p>
+                        <p humidity-value></p>
+                    </div>
+
+                    <div class="clouds parameter">
+                        <img src="images/cloud.png" alt="Cloud">
+                        <p>CLOUDS</p>
+                        <p clouds-value></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API ERROR CONTAINER -->
+            <div class="api-error-container" apiErrorContainer>
+                <img src="images/not-found.png" alt="error" data-notFoundImg>
+                <p data-apiErrorText></p>
+            </div>
+             
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
